@@ -1,0 +1,362 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+::-webkit-scrollbar { 
+  width: 0px;  
+  background: transparent;  
+};
+
+
+html {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+// Задаем основные переменные
+
+$maincolor: rgb(45, 85, 127);
+$bluecolor: rgb(68, 150, 250);
+$greycolor: rgb(237, 242, 247);
+
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  background-color: $maincolor;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header--block {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.header--logo {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header--basket {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  justify-content: space-evenly;
+  height: 50%;
+  border: 1px solid #CEC9C9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header--text {
+  display: flex;
+  align-items: center;
+  color: $greycolor;
+  font-size: 15px;
+}
+
+.header--count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 18px;
+  background-color: white;
+  border-radius: 35%;
+}
+
+.header--count span {
+  font-size: 12px;
+}
+
+.header--icon img {
+  min-width: 20px;
+  width: 20px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.inputs select {
+  padding: 8px 12px;
+  padding-right: 50px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #737070;
+  cursor: pointer;
+  appearance: none;
+}
+
+.input option {
+  color: #737070;
+}
+
+.input {
+  margin-top: 30px;
+  margin-right: 10px;
+  width: 230px;
+  background-color: $greycolor;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.input--category {
+  margin-right: 0px;
+}
+
+.input:after {
+  content: '';
+  background: url(../images/triangle.png) center center no-repeat;
+  width: 13px;
+  height: 12px;
+  position: absolute;
+  right: 16px;
+  top: 13px;
+  cursor: pointer;
+}
+
+.cards-tags span {
+  margin-top: 5px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-bottom: 100px;
+}
+
+.cards--item {
+  margin-top: 35px;
+  width: 30%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.1);
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.cards--item img {
+  border-radius: 5px 5px 0 0;
+}
+
+.cards--description {
+  padding: 20px 20px 10px 20px;;
+}
+
+.cards--tittle {
+  font-size: 20px;
+}
+
+.cards--text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #737070;
+}
+
+.cards-tags {
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+.cards-tags span {
+  color: #737070;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 15px;
+  background-color: $greycolor;
+}
+
+.cards--img {
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container--card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.cards--description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+}
+
+.card--text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #737070;
+}
+
+.card--count {
+  margin-top: 50px;
+}
+
+.card--count,
+.card--term {
+  font-size: 14px;
+  color: #737070;
+}
+
+.card--summary {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.price {
+  position: relative;
+  font-size: 30px;
+  color: #2E9AFE;
+}
+
+.price:after {
+  content:'руб.';
+  position: absolute;
+  right: -29px;
+  bottom: 8px;
+  font-size: 14px;
+}
+
+.card-button {
+  background-color: $maincolor;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .inputs {
+    justify-content: space-between;
+  }
+
+  .input {
+    margin-right: 0px;
+  }
+
+  .cards--item {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .inputs {
+    justify-content: space-between;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card--count {
+    margin-top: 20px;
+  }
+  .cards--item {
+    width: 70%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .card-description {
+    width: 500px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputs {
+    justify-content: space-between;
+  }
+
+  .container--card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card--tittle {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .card--summary {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .card-description {
+    margin-left: 0px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .inputs {
+    justify-content: center;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .cards--item {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header--logo {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .card-description {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+

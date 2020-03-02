@@ -212,7 +212,7 @@ $greycolor: rgb(237, 242, 247);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
+  min-height: 250px;
 }
 
 .card--text {
